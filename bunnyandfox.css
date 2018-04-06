@@ -22,72 +22,34 @@ body {
 #fox {
 
     position: absolute;
-    left: 10vw;
+    right: 40vw;
     top: 10vw;
 
-    width: 150vw;
-    height: 50vw;
+    width: 28vw;
+    height: 33vw;
 
-    background-image: url(fox-01.svg);
+    background-image: url(fox2.svg);
     background-size: 100%;
-    transform: translate(-25vw, -14vw);
+    /*    transform: translate(-25vw, -14vw);*/
+    transform: translateX(35vw);
+    animation: mymove 5s 2;
 
 }
 
-#bunny {
-    position: absolute;
-    left: 10vw;
-    top: 10vw;
-
-    width: 90vw;
-    height: 40vw;
-
-    background-image: url(bunny-01.svg);
-    background-size: 100%;
-    /*    transform:   translate(-5vw, -0.1vw);*/
-    transform: translateX(-20vw);
-
-}
 
 
 #bunny {
     position: absolute;
-    left: 10vw;
-    top: 10vw;
+    left: 27vw;
+    top: 9vw;
 
-    width: 90vw;
-    height: 40vw;
+    width: 20vw;
+    height: 35vw;
 
-    background-image: url(bunny-01.svg);
+    background-image: url(bunny2.svg);
     background-size: 100%;
 
-    animation: mymove 5s infinite;
-}
-
-@keyframes mymove {
-    0% {
-        left: 0px;
-    }
-    50% {
-        left: 100px;
-    }
-    100% {
-        left: 0px;
-    }
-}
-
-#fox {
-    position: absolute;
-    left: 10vw;
-    top: 10vw;
-
-    width: 90vw;
-    height: 40vw;
-
-    background-image: url(fox-01.svg);
-    background-size: 100%;
-
-    animation: mymove 5s infinite;
+    animation: mymove 5s 2;
 }
 
 @keyframes mymove {
