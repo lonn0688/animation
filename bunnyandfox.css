@@ -9,57 +9,103 @@ body {
     position: relative;
 }
 
-#baggrund {
+#background {
 
     width: 100%;
     height: 100%;
-    background-image: url(background-01.svg);
+    background-image: url(backgroundnew-01.svg);
+
     background-size: 100% 100%;
 
 }
 
 
+/*#foreground {
+
+    width: 100%;
+    height: 100%;
+    background-image: url(foreground-01.png);
+    background-size: 100% 100%;
+    top: 30vw;
+    left: 50vw;
+
+}*/
+
+
+#overlay{
+width:100%;
+position:absolute; /*You may also use fixed depending on your needs.*/
+left:0;
+top:0; /*If you want it at the bottom you probably want bottom:0 instead*/
+z-index: 999;
+}
+
+
 #fox {
 
+    width: 100vw;
+    height: 65vw;
+    top: 2vw;
+    left: 50vw;
     position: absolute;
-    right: 40vw;
-    top: 10vw;
+    background-image: url(foxspritenew-01.svg);
+    background-size: 399% 100%;
+}
 
-    width: 28vw;
-    height: 33vw;
 
-    background-image: url(fox2.svg);
-    background-size: 100%;
-    /*    transform: translate(-25vw, -14vw);*/
-    transform: translateX(35vw);
-    animation: mymove 5s 2;
+
+.foxwalk{
+
+
+    animation-name: foxwalk;
+    animation-duration: 2s;
+    animation-timing-function: steps(8);
+    animation-iteration-count: infinite;
+    animation-direction: forward;
+
+
+}
+
+
+@keyframes foxwalk {
+
+    0% {background-position: 0 0;
+}
+    100%{
+        background-position: -800% 0;
+    }
 
 }
 
 
 
-#bunny {
+
+
+#bunny{
+
+    width: 15vw;
+    height: 79vw;
+    top: -5vw;
+    left: 29vw;
     position: absolute;
-    left: 27vw;
-    top: 9vw;
+    background-image: url(walkcyclebunny-01.svg);
+    background-size: 700% 100%;
+}
+.jumping{
 
-    width: 20vw;
-    height: 35vw;
+    animation-name: jumping;
+    animation-duration: 1s;
+    animation-timing-function: steps(7);
+    animation-iteration-count: infinite;
 
-    background-image: url(bunny2.svg);
-    background-size: 100%;
-
-    animation: mymove 5s 2;
 }
 
-@keyframes mymove {
-    0% {
-        left: 0px;
-    }
-    50% {
-        left: 100px;
-    }
-    100% {
-        left: 0px;
+@keyframes jumping {
+
+    0% {background-position: 0 0;
+}
+    100%{
+        background-position: -700% 0;
     }
 }
+
