@@ -65,21 +65,18 @@ z-index: 999;
     animation-duration: 2s;
     animation-timing-function: steps(8);
     animation-iteration-count: infinite;
-    animation-direction:normal
+    animation-direction:normal;
 
 
 }
 
 
 @keyframes foxwalk {
-
-    0% {background-position: 0 0;
-}
-    100%{
-        background-position: -800% 0;
+    from{transform: translate(360px);
     }
-
+    to{transform: translate(-10px);}
 }
+
 
 
 
@@ -89,10 +86,10 @@ z-index: 999;
 
     width: 15vw;
     height: 79vw;
-    top: -5vw;
+    top: -8vw;
     left: 29vw;
     position: absolute;
-    background-image: url(walkcyclebunny-01.svg);
+    background-image: url(walkcyclebunnynew.svg);
     background-size: 700% 100%;
 }
 .jumping{
