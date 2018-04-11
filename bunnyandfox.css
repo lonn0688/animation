@@ -33,12 +33,15 @@ body {
 
 
 }
-#overlay{
-width:100%;
-position:absolute; /*You may also use fixed depending on your needs.*/
-left:0;
-top:0; /*If you want it at the bottom you probably want bottom:0 instead*/
-z-index: 999;
+
+#overlay {
+    width: 100%;
+    position: absolute;
+    /*You may also use fixed depending on your needs.*/
+    left: 0;
+    top: 0;
+    /*If you want it at the bottom you probably want bottom:0 instead*/
+    z-index: 999;
 }
 
 
@@ -58,23 +61,33 @@ z-index: 999;
 
 
 
-.foxwalk{
+.foxwalk {
 
 
     animation-name: foxwalk;
     animation-duration: 2s;
     animation-timing-function: steps(8);
     animation-iteration-count: infinite;
-    animation-direction:normal;
+    animation-direction: normal;
 
 
 }
 
 
 @keyframes foxwalk {
-    from{transform: translate(360px);
+    from {
+        transform: translate(360px);
     }
-    to{transform: translate(-10px);}
+    to {
+        transform: translate(-50px);
+    }
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -800% 0;
+    }
+
 }
 
 
@@ -82,17 +95,18 @@ z-index: 999;
 
 
 
-#bunny{
+#bunny {
 
     width: 15vw;
     height: 79vw;
     top: -8vw;
-    left: 29vw;
+    left: 1vw;
     position: absolute;
     background-image: url(walkcyclebunnynew.svg);
     background-size: 700% 100%;
 }
-.jumping{
+
+.jumping {
 
     animation-name: jumping;
     animation-duration: 1s;
@@ -103,10 +117,17 @@ z-index: 999;
 
 @keyframes jumping {
 
-    0% {background-position: 0 0;
-}
-    100%{
+    0% {
+        background-position: 0 0;
+    }
+    100% {
         background-position: -700% 0;
     }
-}
 
+    from {
+        transform: translate(-20px);
+    }
+    to {
+        transform: translate(250px);
+}
+}
