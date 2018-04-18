@@ -14,22 +14,23 @@
 
     <div id="scene">
         <div id="background"></div>
-        <div id="fox" class="foxwalk"></div>
-        <div id="bunny" class="jumping"></div>
-
+        <div id="fox_container">
+            <div id="fox_sprite"></div>
+        </div>
+        <div id="bunny_container">
+            <div id="bunny_sprite"></div>
+        </div>
     </div>
+
+    <audio controls autoplay src="startmusic_new.mp3" controls></audio>
+
+    <input id="runaway" type="button" value="Run away!!" onclick="doFunction();" />
+
+    <input id="runaway" type="button" value="Fight!!" onclick="doFunction();" />
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="bunnyandfox.js"></script>
 
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-

@@ -10,6 +10,7 @@ body {
 }
 
 #background {
+    position: absolute;
 
     width: 100%;
     height: 100%;
@@ -20,12 +21,8 @@ body {
 }
 
 
-
-
-
-
 #foreground {
-
+    position: absolute;
     width: 100%;
     height: 100%;
     background-image: url(foreground-01.png);
@@ -48,39 +45,68 @@ body {
 
 
 
-#fox {
 
-    width: 100vw;
-    height: 65vw;
-    top: 2vw;
+
+
+
+
+
+#fox_container {
+    width: 50vw;
+    height: 32.68vw;
+    position: absolute;
+}
+
+.fox_start_position {
+    top: 26vw;
     left: 50vw;
+}
+
+#fox_sprite {
+    width: 30vw;
+    height: 32.68vw;
     position: absolute;
     background-image: url(foxspritenew-01.svg);
-    background-size: 399% 100%;
+    background-size: 800% 100%;
 }
 
+.fox_container_walk_in {
 
+    animation-name: fox_container_walk_in_kf;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: 2;
+    animation-direction:reverse;
 
-.foxwalk {
+}
 
+@keyframes fox_container_walk_in_kf {
 
-    animation-name: foxwalk;
-    animation-duration: 2s;
+    0% {
+        left: 40vw;
+    }
+    100% {
+        left: 80vw;
+    }
+
+}
+
+.fox_container_stop {   /* virker ikke??? WHYYYYYYY*/
+    left: 40vw;
+
+}
+
+.fox_paws {
+
+    animation-name: fox_paws_kf;
+    animation-duration: 5s;
     animation-timing-function: steps(8);
     animation-iteration-count: infinite;
-    animation-direction: normal;
-
-
 }
 
 
-@keyframes foxwalk {
-    from {
-        transform: translate(360px);
-    }
-    to {
-        transform: translate(-50px);
-    }
+@keyframes fox_paws_kf {
+
     0% {
         background-position: 0 0;
     }
@@ -95,27 +121,68 @@ body {
 
 
 
-#bunny {
+#bunny_container {
 
-    width: 15vw;
-    height: 79vw;
-    top: -8vw;
-    left: 1vw;
+
+    width: 20vw;
+    height: 90vw;
     position: absolute;
-    background-image: url(walkcyclebunnynew.svg);
-    background-size: 700% 100%;
+
 }
 
-.jumping {
+#bunny_sprite {
 
-    animation-name: jumping;
+    background-image: url(walkcyclebunnynew.svg);
+    background-size: 700% 100%;
+    position: absolute;
+    width: 11vw;
+    height: 90vw;
+
+}
+
+
+
+.bunny_start_position {
+    top: -9vw;
+    left: 30vw;
+
+}
+
+
+.bunny_container_walk_in{
+    animation-name: bunny_container_walk_in_kf;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+
+}
+
+@keyframes bunny_container_walk_in_kf{
+     0% {
+        left: 0vw;
+    }
+    100% {
+        left: 40vw;
+    }
+}
+
+
+
+.bunny_container_stop{      /*virker ikke? - virker heller ikke med                                                                ræven*/
+ left: px;
+    }
+
+
+
+.bunny_paws{
+
+    animation-name: bunny_paws_kf;
     animation-duration: 1s;
     animation-timing-function: steps(7);
     animation-iteration-count: infinite;
-
 }
 
-@keyframes jumping {
+@keyframes bunny_paws_kf {
 
     0% {
         background-position: 0 0;
@@ -124,10 +191,44 @@ body {
         background-position: -700% 0;
     }
 
-    from {
+}
+
+
+
+
+
+
+.bunny_walk_in {
+    animation-name: bunny_walk_in_kf;
+    animation-duration: 1s;
+    animation-timing-function: steps(7);
+    animation-iteration-count: infinite;
+}
+
+
+
+/*.jumping {
+
+    animation-name: bunny_walk_in_kf;
+    animation-duration: 1s;
+    animation-timing-function: steps(7);
+    animation-iteration-count: infinite;
+}*/
+
+@keyframes bunny_walk_in_kf {
+
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -700% 0;
+    }
+}
+
+/*  from {
         transform: translate(-20px);
     }
     to {
         transform: translate(250px);
 }
-}
+*/
