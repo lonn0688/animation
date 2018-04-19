@@ -41,28 +41,16 @@ body {
     z-index: 999;
 }
 
-
-
-
-
-
-
-
-
-
-
 #fox_container {
-    width: 50vw;
-    height: 32.68vw;
-    position: absolute;
-}
 
-.fox_start_position {
-    top: 26vw;
-    left: 50vw;
-}
+    position: absolute;
+     top: 26vw;
+    left: 40vw;
+
+} /*hvordan kan containeren og sprite ikke hænge sammen?*/
 
 #fox_sprite {
+
     width: 30vw;
     height: 32.68vw;
     position: absolute;
@@ -75,8 +63,13 @@ body {
     animation-name: fox_container_walk_in_kf;
     animation-duration: 7s;
     animation-timing-function: linear;
-    animation-iteration-count: 2;
+    animation-iteration-count: 1;
     animation-direction:reverse;
+
+}
+
+.fox_container_stop {   /* virker ikke??? WHYYYYYYY*/
+    left: 40vw;
 
 }
 
@@ -91,10 +84,7 @@ body {
 
 }
 
-.fox_container_stop {   /* virker ikke??? WHYYYYYYY*/
-    left: 40vw;
 
-}
 
 .fox_paws {
 
@@ -103,7 +93,6 @@ body {
     animation-timing-function: steps(8);
     animation-iteration-count: infinite;
 }
-
 
 @keyframes fox_paws_kf {
 
@@ -115,11 +104,6 @@ body {
     }
 
 }
-
-
-
-
-
 
 #bunny_container {
 
@@ -140,14 +124,11 @@ body {
 
 }
 
-
-
 .bunny_start_position {
     top: -9vw;
     left: 30vw;
 
 }
-
 
 .bunny_container_walk_in{
     animation-name: bunny_container_walk_in_kf;
@@ -166,13 +147,9 @@ body {
     }
 }
 
-
-
 .bunny_container_stop{      /*virker ikke? - virker heller ikke med                                                                ræven*/
  left: px;
     }
-
-
 
 .bunny_paws{
 
